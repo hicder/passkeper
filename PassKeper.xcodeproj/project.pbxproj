@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CF270BC17AC9AF700B328BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF270BB17AC9AF700B328BB /* UIKit.framework */; };
+		1CF270BE17AC9AF700B328BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF270BD17AC9AF700B328BB /* Foundation.framework */; };
+		1CF270C017AC9AF700B328BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF270BF17AC9AF700B328BB /* CoreGraphics.framework */; };
+		1CF270C617AC9AF700B328BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CF270C417AC9AF700B328BB /* InfoPlist.strings */; };
+		1CF270C817AC9AF700B328BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF270C717AC9AF700B328BB /* main.m */; };
+		1CF270CC17AC9AF700B328BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF270CB17AC9AF700B328BB /* AppDelegate.m */; };
+		1CF270CE17AC9AF700B328BB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF270CD17AC9AF700B328BB /* Default.png */; };
+		1CF270D017AC9AF800B328BB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF270CF17AC9AF700B328BB /* Default@2x.png */; };
+		1CF270D217AC9AF800B328BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CF270D117AC9AF800B328BB /* Default-568h@2x.png */; };
+		1CF270D517AC9AF800B328BB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CF270D317AC9AF800B328BB /* MainStoryboard.storyboard */; };
+		1CF270D817AC9AF800B328BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF270D717AC9AF800B328BB /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1CF270B817AC9AF700B328BB /* PassKeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassKeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CF270BB17AC9AF700B328BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1CF270BD17AC9AF700B328BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1CF270BF17AC9AF700B328BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1CF270C317AC9AF700B328BB /* PassKeper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PassKeper-Info.plist"; sourceTree = "<group>"; };
+		1CF270C517AC9AF700B328BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CF270C717AC9AF700B328BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CF270C917AC9AF700B328BB /* PassKeper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PassKeper-Prefix.pch"; sourceTree = "<group>"; };
+		1CF270CA17AC9AF700B328BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1CF270CB17AC9AF700B328BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1CF270CD17AC9AF700B328BB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1CF270CF17AC9AF700B328BB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1CF270D117AC9AF800B328BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1CF270D417AC9AF800B328BB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1CF270D617AC9AF800B328BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1CF270D717AC9AF800B328BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CF270B517AC9AF700B328BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CF270BC17AC9AF700B328BB /* UIKit.framework in Frameworks */,
+				1CF270BE17AC9AF700B328BB /* Foundation.framework in Frameworks */,
+				1CF270C017AC9AF700B328BB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CF270AF17AC9AF700B328BB = {
+			isa = PBXGroup;
+			children = (
+				1CF270C117AC9AF700B328BB /* PassKeper */,
+				1CF270BA17AC9AF700B328BB /* Frameworks */,
+				1CF270B917AC9AF700B328BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CF270B917AC9AF700B328BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CF270B817AC9AF700B328BB /* PassKeper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CF270BA17AC9AF700B328BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CF270BB17AC9AF700B328BB /* UIKit.framework */,
+				1CF270BD17AC9AF700B328BB /* Foundation.framework */,
+				1CF270BF17AC9AF700B328BB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CF270C117AC9AF700B328BB /* PassKeper */ = {
+			isa = PBXGroup;
+			children = (
+				1CF270CA17AC9AF700B328BB /* AppDelegate.h */,
+				1CF270CB17AC9AF700B328BB /* AppDelegate.m */,
+				1CF270D317AC9AF800B328BB /* MainStoryboard.storyboard */,
+				1CF270D617AC9AF800B328BB /* ViewController.h */,
+				1CF270D717AC9AF800B328BB /* ViewController.m */,
+				1CF270C217AC9AF700B328BB /* Supporting Files */,
+			);
+			path = PassKeper;
+			sourceTree = "<group>";
+		};
+		1CF270C217AC9AF700B328BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CF270C317AC9AF700B328BB /* PassKeper-Info.plist */,
+				1CF270C417AC9AF700B328BB /* InfoPlist.strings */,
+				1CF270C717AC9AF700B328BB /* main.m */,
+				1CF270C917AC9AF700B328BB /* PassKeper-Prefix.pch */,
+				1CF270CD17AC9AF700B328BB /* Default.png */,
+				1CF270CF17AC9AF700B328BB /* Default@2x.png */,
+				1CF270D117AC9AF800B328BB /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CF270B717AC9AF700B328BB /* PassKeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CF270DB17AC9AF800B328BB /* Build configuration list for PBXNativeTarget "PassKeper" */;
+			buildPhases = (
+				1CF270B417AC9AF700B328BB /* Sources */,
+				1CF270B517AC9AF700B328BB /* Frameworks */,
+				1CF270B617AC9AF700B328BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PassKeper;
+			productName = PassKeper;
+			productReference = 1CF270B817AC9AF700B328BB /* PassKeper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CF270B017AC9AF700B328BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Hieu;
+			};
+			buildConfigurationList = 1CF270B317AC9AF700B328BB /* Build configuration list for PBXProject "PassKeper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1CF270AF17AC9AF700B328BB;
+			productRefGroup = 1CF270B917AC9AF700B328BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CF270B717AC9AF700B328BB /* PassKeper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CF270B617AC9AF700B328BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CF270C617AC9AF700B328BB /* InfoPlist.strings in Resources */,
+				1CF270CE17AC9AF700B328BB /* Default.png in Resources */,
+				1CF270D017AC9AF800B328BB /* Default@2x.png in Resources */,
+				1CF270D217AC9AF800B328BB /* Default-568h@2x.png in Resources */,
+				1CF270D517AC9AF800B328BB /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CF270B417AC9AF700B328BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CF270C817AC9AF700B328BB /* main.m in Sources */,
+				1CF270CC17AC9AF700B328BB /* AppDelegate.m in Sources */,
+				1CF270D817AC9AF800B328BB /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1CF270C417AC9AF700B328BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CF270C517AC9AF700B328BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1CF270D317AC9AF800B328BB /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CF270D417AC9AF800B328BB /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CF270D917AC9AF800B328BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1CF270DA17AC9AF800B328BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CF270DC17AC9AF800B328BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PassKeper/PassKeper-Prefix.pch";
+				INFOPLIST_FILE = "PassKeper/PassKeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1CF270DD17AC9AF800B328BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PassKeper/PassKeper-Prefix.pch";
+				INFOPLIST_FILE = "PassKeper/PassKeper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CF270B317AC9AF700B328BB /* Build configuration list for PBXProject "PassKeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CF270D917AC9AF800B328BB /* Debug */,
+				1CF270DA17AC9AF800B328BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CF270DB17AC9AF800B328BB /* Build configuration list for PBXNativeTarget "PassKeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CF270DC17AC9AF800B328BB /* Debug */,
+				1CF270DD17AC9AF800B328BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CF270B017AC9AF700B328BB /* Project object */;
+}
