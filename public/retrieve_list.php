@@ -2,7 +2,7 @@
 require_once("db_config.php");
 $response = array();
 require_once("defined_functions.php");
-if(isset(isset($_POST['username']) && isset($_POST['password'])){
+if(isset($_POST['username']) && isset($_POST['password'])){
 	$logged_in = authenticate($_POST['username'], $_POST['password']);
 	if($logged_in){
 		$response['status'] = "success";

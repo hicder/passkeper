@@ -10,10 +10,10 @@ if(isset($_POST['website']) && isset($_POST['username']) && isset($_POST['passwo
 	$stmt = $mysqli->prepare("INSERT INTO acc_list(website, username, password) VALUES(?, ?, ?)");
 	$stmt->bind_param("sss", $website, $username, $password);
 	if($stmt->execute()){
-		$response = ["result" => "success"];
+		$response = array("result" => "success");
 	}
 	else{
-		$response = ["result" => "error"];
+		$response = array("result" => "failure");
 	}
 	echo json_encode($response);
 }
