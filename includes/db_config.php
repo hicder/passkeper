@@ -1,6 +1,6 @@
 <?php
 define('DB_USER', "hieu");
-define('DB_PASSWORD' "");
+define('DB_PASSWORD', "");
 define('DB_DATABASE', "passkeeper");
 define('DB_SERVER', "http://www.google.com");
 

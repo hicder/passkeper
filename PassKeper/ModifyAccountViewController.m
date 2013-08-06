@@ -35,4 +35,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)updateInfo:(id)sender {
+}
+
+- (IBAction)backButton:(id)sender {
+}
 @end

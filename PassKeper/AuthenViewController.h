@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PassListViewController.h"
 
 @interface AuthenViewController : UIViewController
+- (IBAction)Authen:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *userName;
+@property (weak, nonatomic) IBOutlet UITextField *passWord;
 
 @end

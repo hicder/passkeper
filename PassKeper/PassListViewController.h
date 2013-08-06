@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PassListViewController : UIViewController
-
+@interface PassListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray * websiteName;
+@property (strong, nonatomic) NSDictionary * accountPass;
 @end

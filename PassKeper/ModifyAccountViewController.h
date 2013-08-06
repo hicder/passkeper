@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ModifyAccountViewController : UIViewController
+- (IBAction)updateInfo:(id)sender;
+- (IBAction)backButton:(id)sender;
 
 @end

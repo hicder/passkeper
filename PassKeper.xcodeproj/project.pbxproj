@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C75271B17ADE4EB000149C1 /* AuthenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C75271A17ADE4EB000149C1 /* AuthenViewController.m */; };
+		1C75271E17B0C7C9000149C1 /* ModifyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C75271D17B0C7C9000149C1 /* ModifyAccountViewController.m */; };
+		1C9840A417AD30290003DD02 /* PassListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9840A317AD30290003DD02 /* PassListViewController.m */; };
 		1CF270BC17AC9AF700B328BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF270BB17AC9AF700B328BB /* UIKit.framework */; };
 		1CF270BE17AC9AF700B328BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF270BD17AC9AF700B328BB /* Foundation.framework */; };
 		1CF270C017AC9AF700B328BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF270BF17AC9AF700B328BB /* CoreGraphics.framework */; };
@@ -21,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C75271917ADE4EB000149C1 /* AuthenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenViewController.h; sourceTree = "<group>"; };
+		1C75271A17ADE4EB000149C1 /* AuthenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenViewController.m; sourceTree = "<group>"; };
+		1C75271C17B0C7C9000149C1 /* ModifyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAccountViewController.h; sourceTree = "<group>"; };
+		1C75271D17B0C7C9000149C1 /* ModifyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyAccountViewController.m; sourceTree = "<group>"; };
+		1C9840A217AD30290003DD02 /* PassListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassListViewController.h; sourceTree = "<group>"; };
+		1C9840A317AD30290003DD02 /* PassListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassListViewController.m; sourceTree = "<group>"; };
 		1CF270B817AC9AF700B328BB /* PassKeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassKeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF270BB17AC9AF700B328BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CF270BD17AC9AF700B328BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +95,12 @@
 				1CF270CA17AC9AF700B328BB /* AppDelegate.h */,
 				1CF270CB17AC9AF700B328BB /* AppDelegate.m */,
 				1CF270D317AC9AF800B328BB /* MainStoryboard.storyboard */,
+				1C75271C17B0C7C9000149C1 /* ModifyAccountViewController.h */,
+				1C75271D17B0C7C9000149C1 /* ModifyAccountViewController.m */,
+				1C75271917ADE4EB000149C1 /* AuthenViewController.h */,
+				1C75271A17ADE4EB000149C1 /* AuthenViewController.m */,
+				1C9840A217AD30290003DD02 /* PassListViewController.h */,
+				1C9840A317AD30290003DD02 /* PassListViewController.m */,
 				1CF270D617AC9AF800B328BB /* ViewController.h */,
 				1CF270D717AC9AF800B328BB /* ViewController.m */,
 				1CF270C217AC9AF700B328BB /* Supporting Files */,
@@ -176,6 +191,9 @@
 				1CF270C817AC9AF700B328BB /* main.m in Sources */,
 				1CF270CC17AC9AF700B328BB /* AppDelegate.m in Sources */,
 				1CF270D817AC9AF800B328BB /* ViewController.m in Sources */,
+				1C9840A417AD30290003DD02 /* PassListViewController.m in Sources */,
+				1C75271B17ADE4EB000149C1 /* AuthenViewController.m in Sources */,
+				1C75271E17B0C7C9000149C1 /* ModifyAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +316,7 @@
 				1CF270DD17AC9AF800B328BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

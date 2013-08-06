@@ -57,4 +57,8 @@ function get_all_passwords(){
 	return $returned_array;
 }
 
+function check_username_exist($username){
+	
+}
+
 ?>
