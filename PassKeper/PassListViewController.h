@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray * websiteName;
 @property (strong, nonatomic) NSDictionary * accountPass;
+@property (strong, nonatomic) NSString *username;
+@property (strong, nonatomic) NSString *password;
 @end

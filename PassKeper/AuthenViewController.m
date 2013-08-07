@@ -13,7 +13,7 @@
 @end
 
 @implementation AuthenViewController
-@synthesize userName, passWord;
+@synthesize userName, passWord, responseData, conn;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,6 +29,7 @@
 	// Do any additional setup after loading the view.
     userName.delegate = self;
     passWord.delegate = self;
+    responseData = [[NSMutableData alloc]init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,24 +39,59 @@
 }
 
 - (IBAction)Authen:(id)sender {
-    /*
+    
     NSString *user = [userName text];
     NSString *pass = [passWord text];
-    NSString * post = [NSString stringWithFormat:@"&Username=%@&Password=%@",user, pass];
+    NSString * post = [NSString stringWithFormat:@"&username=%@&password=%@",user, pass];
     NSData * postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
-    [request setURL:[NSURL URLWithString:@"http://www.google.com"]];
+    [request setURL:[NSURL URLWithString:@"http://web.engr.illinois.edu/~dpham9/db_login.php"]];
     [request setHTTPMethod:@"POST"];
     NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
     [request setHTTPBody:postData];
-//    PassListViewController *plvc = [self.storyboard instantiateViewControllerWithIdentifier:@"passlist"];
+    conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    if(conn){
+        NSLog(@"Successfully connected!");
+    }
+    else{
+        NSLog(@"Connection could not be made");
+    }
     
-//    [self.navigationController pushViewController:plvc animated:YES];
-*/
 }
 
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    NSLog(@"didReceiveResponse");
+    [self.responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [self.responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"didFailWithError");
+    NSLog(@"%@",[NSString stringWithFormat:@"Connection failed: %@", [error description]]);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    if(connection == conn){
+        NSError *myError = nil;
+        NSLog(@"Succeeded! Received %d bytes of data",[self.responseData length]);
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:&myError];
+        NSString *status = [NSString stringWithString:[dic objectForKey:@"result"]];
+        NSLog(@"%@", status);
+        if([status isEqualToString:@"success"]){
+            NSLog(@"We're in");
+            PassListViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"passlist"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else{
+            NSLog(@"Wrong pass");
+        }
+    }
+}
 - (void) textFieldShouldReturn:(UITextField*)textField{
     [textField resignFirstResponder];
 }

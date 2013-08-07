@@ -13,7 +13,7 @@
 @end
 
 @implementation PassListViewController
-
+@synthesize username, password, websiteName, accountPass;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

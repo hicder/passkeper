@@ -9,7 +9,7 @@
             <objects>
                 <viewController storyboardIdentifier="passlist" id="6NW-Cs-cre" customClass="PassListViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3a-Jx-lWV">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-Rc-WCr">
@@ -193,7 +193,6 @@
                                 </state>
                                 <connections>
                                     <action selector="Authen:" destination="9IM-6D-9Mw" eventType="touchUpInside" id="iM4-nc-UYf"/>
-                                    <segue destination="6NW-Cs-cre" kind="push" id="9lu-gi-laU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8N-Q7-UEj">

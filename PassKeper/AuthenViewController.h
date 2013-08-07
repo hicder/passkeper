@@ -13,5 +13,6 @@
 - (IBAction)Authen:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *passWord;
-
+@property (strong, nonatomic) NSMutableData *responseData;
+@property (strong, nonatomic) NSURLConnection *conn;
 @end
