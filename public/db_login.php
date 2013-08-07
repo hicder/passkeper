@@ -1,6 +1,9 @@
 <?php
-	include("../includes/db_config.php");
-	require_once("../includes/defined_functions.php");
+include("../includes/db_config.php");
+?>
+
+<?php
+require_once("../includes/defined_functions.php");
 ?>
 
 <?php
@@ -14,6 +17,10 @@
 		else{
 			$result['result'] = "failure";
 		}
-		echo json_encode($result);
 	}
+	else{
+		$result['result'] = "failure";
+	}
+	echo json_encode($result);
+
 ?>

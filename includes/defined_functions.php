@@ -12,7 +12,7 @@ function password_encrypt($password){
 	$salt_length = 22;
 	$salt = generate_salt($salt_length);
 	$format_and_salt = $hash_format.$salt;
-	$hash = crypt($password, $format_and_salt);
+	$hash = crypt($password, $format_and_salt);	
 	return $hash;
 }
 
@@ -47,11 +47,11 @@ function get_all_passwords(){
 	global $mysqli;
 	$stmt = $mysqli->prepare("SELECT * FROM acc_list");
 	$returned_array = array();
-	if($stmt->execute()){
-		$result = $stmt->get_result();
-		while($myrow = $result->fetch_assoc()){
-			array_push($returned_array, $myrow);
-		}
+	$stmt->execute();
+	$result = $stmt->get_result();
+	while($myrow = $result->fetch_assoc()){
+		array_push($returned_array, $myrow);
+		
 	}
 	
 	return $returned_array;
