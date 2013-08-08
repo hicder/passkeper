@@ -13,7 +13,7 @@
 @end
 
 @implementation ModifyAccountViewController
-
+@synthesize usernamebox, passwordbox, usernameboxtext, passwordboxtext, newpasswordbox, websitetext, conn;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,6 +27,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [usernamebox setText:usernameboxtext];
+    [passwordbox setText:passwordboxtext];
+    usernamebox.delegate = self;
+    newpasswordbox.delegate = self;
+    passwordbox.delegate = self;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(goBack)];
+
+}
+
+-(void) goBack{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,8 +47,32 @@
 }
 
 - (IBAction)updateInfo:(id)sender {
+    NSString * newpass = [newpasswordbox text];
+    if ([newpass length] != 0) {
+        //update the password
+        NSString * post = [NSString stringWithFormat:@"&username=%@&password=%@&website=%@",usernameboxtext, [newpasswordbox text], websitetext];
+        NSData * postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
+        [request setURL:[NSURL URLWithString:@"http://web.engr.illinois.edu/~dpham9/update_account.php"]];
+        [request setHTTPMethod:@"POST"];
+        NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+        [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
+        [request setHTTPBody:postData];
+        conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+        if(conn){
+            NSLog(@"Successfully connected!");
+        }
+        else{
+            NSLog(@"Connection could not be made");
+        }
+
+    }
 }
 
-- (IBAction)backButton:(id)sender {
+- (void) textFieldShouldReturn:(UITextField*)textField{
+    [textField resignFirstResponder];
 }
+
+
 @end

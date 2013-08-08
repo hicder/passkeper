@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModifyAccountViewController.h"
 
 @interface PassListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -14,4 +15,8 @@
 @property (strong, nonatomic) NSDictionary * accountPass;
 @property (strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSURLConnection *conn;
+@property (strong, nonatomic) NSURLConnection *connupdate;
+@property (strong, nonatomic) NSMutableData *responseData;
+@property (strong, nonatomic) NSMutableArray * passarray;
 @end

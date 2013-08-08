@@ -10,6 +10,11 @@
 
 @interface ModifyAccountViewController : UIViewController
 - (IBAction)updateInfo:(id)sender;
-- (IBAction)backButton:(id)sender;
-
+@property (weak, nonatomic) IBOutlet UITextField *usernamebox;
+@property (weak, nonatomic) IBOutlet UITextField *passwordbox;
+@property (weak, nonatomic) IBOutlet UITextField *newpasswordbox;
+@property (strong, nonatomic) NSString *usernameboxtext;
+@property (strong, nonatomic) NSString *passwordboxtext;
+@property (strong, nonatomic) NSString *websitetext;
+@property (strong, nonatomic) NSURLConnection *conn;
 @end

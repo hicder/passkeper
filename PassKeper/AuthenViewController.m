@@ -85,10 +85,14 @@
         if([status isEqualToString:@"success"]){
             NSLog(@"We're in");
             PassListViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"passlist"];
+            vc.username = [userName text];
+            vc.password = [passWord text];
             [self.navigationController pushViewController:vc animated:YES];
         }
         else{
             NSLog(@"Wrong pass");
+            UIAlertView *myAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"You have entered wrong username and/or password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [myAlert show];
         }
     }
 }
