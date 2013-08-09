@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ModifyAccountViewController.h"
 
-@interface PassListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@interface PassListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ItemModifiedProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray * websiteName;
 @property (strong, nonatomic) NSDictionary * accountPass;
@@ -19,4 +20,10 @@
 @property (strong, nonatomic) NSURLConnection *connupdate;
 @property (strong, nonatomic) NSMutableData *responseData;
 @property (strong, nonatomic) NSMutableArray * passarray;
+@property BOOL itemAdded;
+@property BOOL itemModified;
+@property (strong, nonatomic) NSArray * indexPathsToBeUpdated;
+
+-(NSURLConnection * ) makePOSTrequestwithURL:(NSString*)url withUsername:(NSString *)_username andPassword:(NSString *)_password;
+
 @end

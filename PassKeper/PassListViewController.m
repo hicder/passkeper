@@ -13,7 +13,7 @@
 @end
 
 @implementation PassListViewController
-@synthesize username, password, websiteName, accountPass, conn, responseData, passarray, connupdate;
+@synthesize username, password, websiteName, accountPass, conn, responseData, passarray, connupdate, itemAdded, itemModified, indexPathsToBeUpdated;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,16 +36,8 @@
     
     // Load the lists of accounts and passwords
     responseData = [NSMutableData alloc];
-    NSString * post = [NSString stringWithFormat:@"&username=%@&password=%@",username, password];
-    NSData * postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
-    [request setURL:[NSURL URLWithString:@"http://web.engr.illinois.edu/~dpham9/retrieve_list.php"]];
-    [request setHTTPMethod:@"POST"];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
-    [request setHTTPBody:postData];
-    conn = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    NSString * url = @"http://web.engr.illinois.edu/~dpham9/retrieve_list.php";
+    conn = [self makePOSTrequestwithURL:url withUsername:username andPassword:password];
     if(conn){
         NSLog(@"Connect successfully to retrieve data");
     }
@@ -55,26 +47,18 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+    NSLog(@"view Will Appear");
     [super viewWillAppear:YES];
     NSLog(@"reconnect....");
     responseData = [NSMutableData alloc];
-    NSString * post = [NSString stringWithFormat:@"&username=%@&password=%@",username, password];
-    NSData * postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
-    [request setURL:[NSURL URLWithString:@"http://web.engr.illinois.edu/~dpham9/retrieve_list.php"]];
-    [request setHTTPMethod:@"POST"];
-    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
-    [request setHTTPBody:postData];
-    connupdate = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    NSString * url = @"http://web.engr.illinois.edu/~dpham9/retrieve_list.php";
+    connupdate = [self makePOSTrequestwithURL:url withUsername:username andPassword:password];
     if(connupdate){
         NSLog(@"Connect successfully to retrieve data");
     }
     else{
         NSLog(@"Connect failed to retrieve data");
-    }
-    
+    }    
 }
 
 
@@ -127,6 +111,13 @@
         NSError *myError = nil;
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:self.responseData options:kNilOptions error:&myError];
         passarray = [dic objectForKey:@"results"];
+        if(itemModified){
+            NSLog(@"have something to update");
+            [self.tableView beginUpdates];
+            [self.tableView reloadRowsAtIndexPaths:indexPathsToBeUpdated withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self.tableView endUpdates];
+            itemModified = NO;
+        }
     }
 }
 
@@ -135,8 +126,10 @@
     vc.usernameboxtext  = [[passarray objectAtIndex:indexPath.row]objectForKey:@"username"];
     vc.passwordboxtext = [[passarray objectAtIndex:indexPath.row]objectForKey:@"password"];
     vc.websitetext = [[passarray objectAtIndex:indexPath.row]objectForKey:@"website"];
+    vc.rowSelected = indexPath;
+    vc.delegate = self;
     [self.navigationController pushViewController:vc animated:YES];
-
+    //[self presentViewController:vc animated:YES completion:nil];
 }
 
 -(void) addItem{
@@ -161,5 +154,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [passarray count];
+}
+
+-(NSURLConnection * ) makePOSTrequestwithURL:(NSString*)url withUsername:(NSString *)_username andPassword:(NSString *)_password{
+    NSURLConnection * returnedURL;
+    NSString * post = [NSString stringWithFormat:@"&username=%@&password=%@",_username, _password];
+    NSData * postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
+    [request setURL:[NSURL URLWithString:url]];
+    [request setHTTPMethod:@"POST"];
+    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Current-Type"];
+    [request setHTTPBody:postData];
+    returnedURL = [[NSURLConnection alloc]initWithRequest:request delegate:self];
+    return returnedURL;
+}
+
+- (void) itemModifedWithIndexPath:(NSArray *)indexPaths{
+    NSLog(@"changing indexpath");
+    itemModified = YES;
+    indexPathsToBeUpdated = indexPaths;
 }
 @end

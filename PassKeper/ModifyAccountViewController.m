@@ -13,7 +13,7 @@
 @end
 
 @implementation ModifyAccountViewController
-@synthesize usernamebox, passwordbox, usernameboxtext, passwordboxtext, newpasswordbox, websitetext, conn;
+@synthesize usernamebox, passwordbox, usernameboxtext, passwordboxtext, newpasswordbox, websitetext, conn, rowSelected, delegate;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -50,7 +50,7 @@
     NSString * newpass = [newpasswordbox text];
     if ([newpass length] != 0) {
         //update the password
-        NSString * post = [NSString stringWithFormat:@"&username=%@&password=%@&website=%@",usernameboxtext, [newpasswordbox text], websitetext];
+        NSString * post = [NSString stringWithFormat:@"&username=%@&password=%@&website=%@",[usernamebox text], [newpasswordbox text], websitetext];
         NSData * postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         NSMutableURLRequest * request = [[NSMutableURLRequest alloc]init];
         [request setURL:[NSURL URLWithString:@"http://web.engr.illinois.edu/~dpham9/update_account.php"]];
@@ -66,7 +66,15 @@
         else{
             NSLog(@"Connection could not be made");
         }
-
+        
+        NSArray * indexPaths = [NSArray arrayWithObject:rowSelected];
+        
+        if ([delegate respondsToSelector:@selector(itemModifedWithIndexPath:)]) {
+            NSLog(@"hoho");
+            [delegate itemModifedWithIndexPath:indexPaths];
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+        //[self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 

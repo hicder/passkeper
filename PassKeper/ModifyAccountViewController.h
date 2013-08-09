@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ModifyAccountViewController : UIViewController
+@protocol ItemModifiedProtocol <NSObject>
+
+-(void) itemModifedWithIndexPath:(NSArray *)indexPaths;
+
+@end
+
+
+@interface ModifyAccountViewController : UIViewController{
+}
 - (IBAction)updateInfo:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *usernamebox;
 @property (weak, nonatomic) IBOutlet UITextField *passwordbox;
@@ -17,4 +25,6 @@
 @property (strong, nonatomic) NSString *passwordboxtext;
 @property (strong, nonatomic) NSString *websitetext;
 @property (strong, nonatomic) NSURLConnection *conn;
+@property (nonatomic, assign) id<ItemModifiedProtocol> delegate;
+@property (strong, nonatomic) NSIndexPath * rowSelected;
 @end

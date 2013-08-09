@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C14603217B47364009E1ECC /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C14603117B47364009E1ECC /* CreateAccountViewController.m */; };
+		1C14603517B4795A009E1ECC /* ConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C14603417B4795A009E1ECC /* ConnectionDelegate.m */; };
 		1C75271B17ADE4EB000149C1 /* AuthenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C75271A17ADE4EB000149C1 /* AuthenViewController.m */; };
 		1C75271E17B0C7C9000149C1 /* ModifyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C75271D17B0C7C9000149C1 /* ModifyAccountViewController.m */; };
 		1C9840A417AD30290003DD02 /* PassListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9840A317AD30290003DD02 /* PassListViewController.m */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C14603017B47364009E1ECC /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
+		1C14603117B47364009E1ECC /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
+		1C14603317B4795A009E1ECC /* ConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionDelegate.h; sourceTree = "<group>"; };
+		1C14603417B4795A009E1ECC /* ConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionDelegate.m; sourceTree = "<group>"; };
 		1C75271917ADE4EB000149C1 /* AuthenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenViewController.h; sourceTree = "<group>"; };
 		1C75271A17ADE4EB000149C1 /* AuthenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenViewController.m; sourceTree = "<group>"; };
 		1C75271C17B0C7C9000149C1 /* ModifyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAccountViewController.h; sourceTree = "<group>"; };
@@ -95,12 +101,16 @@
 				1CF270CA17AC9AF700B328BB /* AppDelegate.h */,
 				1CF270CB17AC9AF700B328BB /* AppDelegate.m */,
 				1CF270D317AC9AF800B328BB /* MainStoryboard.storyboard */,
+				1C14603017B47364009E1ECC /* CreateAccountViewController.h */,
+				1C14603117B47364009E1ECC /* CreateAccountViewController.m */,
 				1C75271C17B0C7C9000149C1 /* ModifyAccountViewController.h */,
 				1C75271D17B0C7C9000149C1 /* ModifyAccountViewController.m */,
 				1C75271917ADE4EB000149C1 /* AuthenViewController.h */,
 				1C75271A17ADE4EB000149C1 /* AuthenViewController.m */,
 				1C9840A217AD30290003DD02 /* PassListViewController.h */,
 				1C9840A317AD30290003DD02 /* PassListViewController.m */,
+				1C14603317B4795A009E1ECC /* ConnectionDelegate.h */,
+				1C14603417B4795A009E1ECC /* ConnectionDelegate.m */,
 				1CF270D617AC9AF800B328BB /* ViewController.h */,
 				1CF270D717AC9AF800B328BB /* ViewController.m */,
 				1CF270C217AC9AF700B328BB /* Supporting Files */,
@@ -194,6 +204,8 @@
 				1C9840A417AD30290003DD02 /* PassListViewController.m in Sources */,
 				1C75271B17ADE4EB000149C1 /* AuthenViewController.m in Sources */,
 				1C75271E17B0C7C9000149C1 /* ModifyAccountViewController.m in Sources */,
+				1C14603217B47364009E1ECC /* CreateAccountViewController.m in Sources */,
+				1C14603517B4795A009E1ECC /* ConnectionDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
