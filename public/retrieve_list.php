@@ -1,6 +1,6 @@
 <?php
-require_once("db_config.php");
-require_once("defined_functions.php");
+include("../includes/db_config.php");
+require_once("../includes/defined_functions.php");
 $response = array();
 if(isset($_POST['username']) && isset($_POST['password'])){
 	$logged_in = authenticate($_POST['username'], $_POST['password']);
