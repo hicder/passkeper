@@ -1,7 +1,6 @@
 <?php
 include("../includes/db_config.php");
 require_once("../includes/defined_functions.php");
-$mysqli = new mysqli("");	
 $response = array();
 if(isset($_POST['newwebsite']) && isset($_POST['newusername']) && isset($_POST['newpassword']) && isset($_POST['username']) && isset($_POST['password'])){
 	$login_username = $_POST['username'];
