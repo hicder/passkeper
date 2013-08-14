@@ -1,6 +1,6 @@
 <?php
 $url = 'http://web.engr.illinois.edu/~dpham9/db_login.php';
-$data = array('username' => 'hicder', 'password' => 'phamduchieu');
+$data = array('username' => '', 'password' => '');
 
 // use key 'http' even if you send the request to https://...
 $options = array(
