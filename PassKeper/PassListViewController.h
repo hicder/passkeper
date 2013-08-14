@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ModifyAccountViewController.h"
+#import "CreateAccountViewController.h"
 
-
-@interface PassListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ItemModifiedProtocol>
+@interface PassListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ItemModifiedProtocol, AccountAdded>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray * websiteName;
 @property (strong, nonatomic) NSDictionary * accountPass;

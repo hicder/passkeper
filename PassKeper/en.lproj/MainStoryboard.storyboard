@@ -230,7 +230,7 @@
         <!--Create Account View Controller-->
         <scene sceneID="jZ3-0T-evg">
             <objects>
-                <viewController id="L8Y-l1-iGK" customClass="CreateAccountViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createaccount" id="L8Y-l1-iGK" customClass="CreateAccountViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A9L-tC-DfT">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -324,6 +324,7 @@
             <relationships>
                 <relationship kind="action" name="createAccount:"/>
                 <relationship kind="outlet" name="passwordbox" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernamebox" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="websitebox" candidateClass="UITextField"/>
             </relationships>
         </class>

@@ -118,6 +118,14 @@
             [self.tableView endUpdates];
             itemModified = NO;
         }
+        
+        if(itemAdded){
+            NSLog(@"something to add to the list");
+            [self.tableView beginUpdates];
+            [self.tableView insertRowsAtIndexPaths:indexPathsToBeUpdated withRowAnimation:UITableViewRowAnimationAutomatic];
+            [self.tableView endUpdates];
+            itemAdded = NO;
+        }
     }
 }
 
@@ -133,7 +141,15 @@
 }
 
 -(void) addItem{
-    
+    CreateAccountViewController * cv = [self.storyboard instantiateViewControllerWithIdentifier:@"createaccount"];
+    cv.currentUsername = username;
+    cv.currentPassword = password;
+    int nitems = [passarray count];
+    NSLog(@"number of items before adding: %d", nitems);
+    NSIndexPath * rAdded = [NSIndexPath indexPathForRow:nitems inSection:0];
+    cv.delegate = self;
+    cv.rowAdded = rAdded;
+    [self.navigationController pushViewController:cv animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -175,5 +191,12 @@
     NSLog(@"changing indexpath");
     itemModified = YES;
     indexPathsToBeUpdated = indexPaths;
+}
+
+
+-(void) itemAddedWithIndexPath:(NSArray *)IndexPaths{
+    NSLog(@"adding items");
+    itemAdded = YES;
+    indexPathsToBeUpdated = IndexPaths;
 }
 @end
