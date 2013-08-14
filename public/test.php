@@ -1,6 +1,7 @@
 <?php
-$url = 'http://web.engr.illinois.edu/~dpham9/db_login.php';
-$data = array('username' => '', 'password' => '');
+//This file is to test whether php files are working correctly
+$url = '';  //enter URL of database here
+$data = array('username' => '', 'password' => ''); //username and password information here
 
 // use key 'http' even if you send the request to https://...
 $options = array(
